@@ -1,0 +1,7 @@
+clear
+cd microfe
+## initiate the database
+python3 manage.py migrate
+## check it works
+# python3 manage.py runserver reports.ripe.ai:8000  --settings=microfe_main
+python3 manage.py runserver 8000  --settings=microfe_main
