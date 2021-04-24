@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.contrib import admin
 from django.urls import include, path
-
+from dashboard_csr import views
 
 DEBUG = True
 SECRET_KEY = '4l0ngs3cr3tstr1ngw3lln0ts0l0ngw41tn0w1tsl0ng3n0ugh'
@@ -37,7 +37,7 @@ def about(request):
 urlpatterns = [
     url(r'^$', home, name='homepage'),
     url(r'^about/$', about, name='aboutpage'),
-
+    url(r'^csrdashboard/$',views.get_jwt_token, name='token'),
 
     path('reports_funnel_summary/', include('reports_funnel_summary.urls')),
     path('dashboard_csr/', include('dashboard_csr.urls')),

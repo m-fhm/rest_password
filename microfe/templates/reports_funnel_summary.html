@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
-  <h1>Reports Funnel Summary: {{ title }}</h1>
-  <hr>
-  <p>Code: {{ code }}</p>
-  <p></p>
-  
-  <p><a href="/">Home</a> | <a href="/about/">About</a>  | <a href="/reports_funnel_summary/">reports_funnel_summary</a>  | <a href="/dashboard_csr/">Dashboard CSR</a> </p>
+{% extends "index.html" %}
+
+{% block content %}
+
 
 
   <a href='https://api.ripe.ai/reports_funnel_summary/?dev=true&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyQ29kZSI6IjBtajB0bWthIiwiZXhwIjoxNjAzNTAzNjQ5NTQ1fQ.90WRqZw__CEWcKCkUo1ryGoj1Sg9nYNJhmgZjCJIhv8'>http://localhost:3000/reports_funnel_summary/?dev=true&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyQ29kZSI6IjBtajB0bWthIiwiZXhwIjoxNjAzNTAzNjQ5NTQ1fQ.90WRqZw__CEWcKCkUo1ryGoj1Sg9nYNJhmgZjCJIhv8</a>
@@ -212,5 +204,4 @@
   <hr>
   {{ info6 }}  
 
-</body>
-</html>
+  {% endblock %}
